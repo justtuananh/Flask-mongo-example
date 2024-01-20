@@ -1,23 +1,14 @@
-# Run MongoDB with docker :
+# How to run Flask application and mongo using docker compose :
 
-Start the mongo server :
-
-```
-docker run -d -p 27017:27017 --name test-mongo mongo:latest
-```
-
-Install requirements :
+ step 1: Run
 
 ```
-python3 -m pip install -r requirments.txt
+docker compose up 
 ```
 
-To run the Flask app :
+Step 2: Navigate to `http://localhost:5000/` !
+ 
+p/s: you should pass mount directory path with mongo :
 
-```
-python3 app.py  
-```
-
-Navigate to `http://localhost:5000/` !
-
+change line :- /home/justtuananh/data_mongo:/data/db in docker-compose.ml file 
 
